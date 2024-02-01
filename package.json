@@ -1,0 +1,27 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "File Manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliaxeiSehiyenia/File-Manager.git"
+  },
+  "keywords": [
+    "nodejs",
+    "FileManager"
+  ],
+  "author": {
+    "name": "AliaxeiSehiyenia",
+    "email": "alexeisergienia@gmail.com",
+    "url": "https://github.com/AliaxeiSehiyenia"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliaxeiSehiyenia/File-Manager/issues"
+  },
+  "homepage": "https://github.com/AliaxeiSehiyenia/File-Manager#readme"
+}
