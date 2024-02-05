@@ -26,7 +26,6 @@ const ls = async () => {
             Name: item.name,
         }));
 
-        // console.log('List of all files:');
         console.table(tableData);
     } catch {
         console.log('Operation failed');
