@@ -15,6 +15,9 @@
     "nodejs",
     "FileManager"
   ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "author": {
     "name": "AliaxeiSehiyenia",
     "email": "alexeisergienia@gmail.com",
