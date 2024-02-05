@@ -12,6 +12,7 @@ import cpus from './cpus.js';
 import homedir from './homedir.js';
 import username from './username.js';
 import architecture from './architecture.js';
+import hash from './hash.js';
 
 const commandSwitcher = async (command) => {
     const [operation, ...args] = command.split(' ');
@@ -65,7 +66,7 @@ const commandSwitcher = async (command) => {
             }
             break;
         case 'hash':
-            console.log('hash');
+            args.length === 1 ? await hash(args[0]) : console.log('Invalid command');
             break;
         case 'compress':
             console.log('compress');
