@@ -16,7 +16,7 @@ const commandSwitcher = async (command) => {
             await ls();
             break;
         case 'cat':
-            args.length === 1 ? cat(args[0]) : console.log('Invalid command');
+            args.length === 1 ? await cat(args[0]) : console.log('Invalid command');
             break;
         case 'add':
             console.log('add');
