@@ -1,5 +1,6 @@
 import up from './up.js';
 import cd from './cd.js';
+import ls from './ls.js';
 
 const commandSwitcher = async (command) => {
     const [operation, ...args] = command.split(' ');
@@ -13,7 +14,7 @@ const commandSwitcher = async (command) => {
                 : console.log('Invalid command');
             break;
         case 'ls':
-            console.log('ls');
+            await ls();
             break;
         case 'cat':
             console.log('cat');
