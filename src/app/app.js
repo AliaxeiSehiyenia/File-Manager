@@ -5,6 +5,7 @@ import {
 } from 'node:process';
 import greeting from './greeting.js';
 import currentDirectory from './currentDirectory.js';
+import commandSwitcher from './commandSwitcher.js';
 
 const {argv} = process;
 let userName = '';
@@ -22,9 +23,9 @@ const app = async () => {
     await greeting(userName);
     currentDirectory();
 
-    rl.on('line', async (input) => {
+    rl.on('line', (input) => {
         const command = input.trim();
-        command === '.exit' ? rl.close() : console.log(command);
+        command === '.exit' ? rl.close() : commandSwitcher(command);
         currentDirectory();
         rl.prompt();
     });
