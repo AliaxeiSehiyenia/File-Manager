@@ -3,6 +3,7 @@ import {
     stdin as input,
     stdout as output,
 } from 'node:process';
+import greeting from './greeting.js';
 
 const {argv} = process;
 let userName = '';
@@ -14,22 +15,10 @@ argv.forEach((arg) => {
 
 const MESSAGE_EXIT = `Thank you for using File Manager, ${userName || 'Username'}, goodbye!`;
 
-const greeting = async () => {
-    if (!userName) {
-        console.error('The username is not specified');
-        console.log('Use "npm start -- --username=your_username"');
-        console.log('or');
-        console.log('Use ""npm start --username=your_username"');
-        process.exit(1);
-    } else if (typeof userName === 'string') {
-        console.log(`Welcome to the File Manager, ${userName}!`);
-    }
-};
-
 const app = async () => {
     const rl = readline.createInterface({input, output});
 
-    await greeting();
+    await greeting(userName);
 
     rl.on('line', async (input) => {
         const command = input.trim();
