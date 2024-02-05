@@ -8,6 +8,7 @@ import copy from './copy.js';
 import mv from './mv.js';
 import rm from './rm.js';
 import osEOL from './osEOL.js';
+import cpus from './cpus.js';
 
 const commandSwitcher = async (command) => {
     const [operation, ...args] = command.split(' ');
@@ -45,7 +46,7 @@ const commandSwitcher = async (command) => {
                     osEOL();
                     break;
                 case '--cpus':
-                    console.log('--cpus');
+                    cpus()
                     break;
                 case '--homedir':
                     console.log('--homedir');
