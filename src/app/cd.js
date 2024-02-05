@@ -1,6 +1,8 @@
+import {chdir} from 'node:process';
+
 const cd = async (targetDirectory) => {
     try {
-        process.chdir(targetDirectory);
+        chdir(targetDirectory);
         console.log('Successfully!');
     } catch {
         console.log('Operation failed');
