@@ -15,7 +15,7 @@ argv.forEach((arg) => {
     }
 });
 
-const MESSAGE_EXIT = `Thank you for using File Manager, ${userName || 'Username'}, goodbye!`;
+const MESSAGE_EXIT = `Thank you for using File Manager, ${userName}, goodbye!`;
 
 const app = async () => {
     const rl = readline.createInterface({input, output});

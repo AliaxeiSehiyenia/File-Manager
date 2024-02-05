@@ -1,8 +1,10 @@
+import up from './up.js';
+
 const commandSwitcher = (command) => {
     const [operation, ...args] = command.split(' ');
     switch (operation) {
         case 'up':
-            console.log('up');
+            up();
             break;
         case 'cd':
             console.log('cd');
