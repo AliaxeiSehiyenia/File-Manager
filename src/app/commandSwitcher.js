@@ -13,6 +13,8 @@ import homedir from './homedir.js';
 import username from './username.js';
 import architecture from './architecture.js';
 import hash from './hash.js';
+import decompress from './decompress.js';
+import compress from './compress.js';
 
 const commandSwitcher = async (command) => {
     const [operation, ...args] = command.split(' ');
@@ -59,7 +61,7 @@ const commandSwitcher = async (command) => {
                     username();
                     break;
                 case '--architecture':
-                    architecture()
+                    architecture();
                     break;
                 default:
                     console.log('Invalid command');
@@ -69,10 +71,10 @@ const commandSwitcher = async (command) => {
             args.length === 1 ? await hash(args[0]) : console.log('Invalid command');
             break;
         case 'compress':
-            console.log('compress');
+            args.length === 2 ? await compress(args[0], args[1]) : console.log('Invalid command');
             break;
         case 'decompress':
-            console.log('decompress');
+            args.length === 2 ? await decompress(args[0], args[1]) : console.log('Invalid command');
             break;
         default:
             console.log('Invalid command');
