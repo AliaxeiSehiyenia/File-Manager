@@ -1,1 +1,7 @@
-console.log("hello from file manager")
+import app from './app/app.js'
+
+const runApp = () => {
+    app();
+};
+
+runApp();
