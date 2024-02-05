@@ -7,6 +7,7 @@ import rn from './rn.js';
 import copy from './copy.js';
 import mv from './mv.js';
 import rm from './rm.js';
+import osEOL from './osEOL.js';
 
 const commandSwitcher = async (command) => {
     const [operation, ...args] = command.split(' ');
@@ -41,7 +42,7 @@ const commandSwitcher = async (command) => {
         case 'os':
             switch (args[0]) {
                 case '--EOL':
-                    console.log('--EOL');
+                    osEOL();
                     break;
                 case '--cpus':
                     console.log('--cpus');
