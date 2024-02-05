@@ -1,10 +1,10 @@
 import up from './up.js';
 
-const commandSwitcher = (command) => {
+const commandSwitcher = async (command) => {
     const [operation, ...args] = command.split(' ');
     switch (operation) {
         case 'up':
-            up();
+            await up();
             break;
         case 'cd':
             console.log('cd');

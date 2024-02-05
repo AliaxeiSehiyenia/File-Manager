@@ -23,9 +23,9 @@ const app = async () => {
     await greeting(userName);
     currentDirectory();
 
-    rl.on('line', (input) => {
+    rl.on('line', async (input) => {
         const command = input.trim();
-        command === '.exit' ? rl.close() : commandSwitcher(command);
+        command === '.exit' ? rl.close() : await commandSwitcher(command);
         currentDirectory();
         rl.prompt();
     });

@@ -1,7 +1,7 @@
 import * as path from 'path';
 import {chdir, cwd} from 'node:process';
 
-const up = () => {
+const up = async () => {
     try {
         const currentDirectory = cwd();
         const parentDirectory = path.resolve(currentDirectory, '..');

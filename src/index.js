@@ -1,7 +1,7 @@
-import app from './app/app.js'
+import app from './app/app.js';
 
-const runApp = () => {
-    app();
+const runApp = async () => {
+    await app();
 };
 
 runApp();
