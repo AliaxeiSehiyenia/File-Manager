@@ -10,6 +10,7 @@ import rm from './rm.js';
 import osEOL from './osEOL.js';
 import cpus from './cpus.js';
 import homedir from './homedir.js';
+import username from './username.js';
 
 const commandSwitcher = async (command) => {
     const [operation, ...args] = command.split(' ');
@@ -53,7 +54,7 @@ const commandSwitcher = async (command) => {
                     homedir();
                     break;
                 case '--username':
-                    console.log('--username');
+                    username();
                     break;
                 case '--architecture':
                     console.log('--architecture');
