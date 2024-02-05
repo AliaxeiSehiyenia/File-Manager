@@ -11,6 +11,7 @@ import osEOL from './osEOL.js';
 import cpus from './cpus.js';
 import homedir from './homedir.js';
 import username from './username.js';
+import architecture from './architecture.js';
 
 const commandSwitcher = async (command) => {
     const [operation, ...args] = command.split(' ');
@@ -57,7 +58,7 @@ const commandSwitcher = async (command) => {
                     username();
                     break;
                 case '--architecture':
-                    console.log('--architecture');
+                    architecture()
                     break;
                 default:
                     console.log('Invalid command');
