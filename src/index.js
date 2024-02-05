@@ -4,4 +4,6 @@ const runApp = async () => {
     await app();
 };
 
-runApp();
+runApp().catch(error => {
+    console.error(error);
+});
