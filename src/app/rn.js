@@ -8,7 +8,7 @@ const rn = async (oldFileName, newFileName) => {
 
         await fs.access(oldFileName);
         await fs.rename(oldFileName, newFullFileName);
-        console.log('File added successfully!');
+        console.log('File renamed successfully!');
     } catch {
         console.error('Operation failed');
     }
