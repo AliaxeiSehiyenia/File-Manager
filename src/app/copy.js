@@ -15,10 +15,7 @@ const copy = async (pathToFile, pathToNewDirectory) => {
 
         readStream.pipe(writeStream);
 
-        writeStream.on('close', () => {
-            console.log('File copied successfully!');
-            fs.rm(pathToFile, () => console.log('File deleted successfully!'));
-        });
+        writeStream.on('close', () => console.log('File copied successfully!'));
     } catch {
         console.log('Operation failed');
     }
