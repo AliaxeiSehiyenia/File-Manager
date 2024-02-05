@@ -4,6 +4,7 @@ import {
     stdout as output,
 } from 'node:process';
 import greeting from './greeting.js';
+import currentDirectory from './currentDirectory.js';
 
 const {argv} = process;
 let userName = '';
@@ -19,10 +20,12 @@ const app = async () => {
     const rl = readline.createInterface({input, output});
 
     await greeting(userName);
+    currentDirectory();
 
     rl.on('line', async (input) => {
         const command = input.trim();
         command === '.exit' ? rl.close() : console.log(command);
+        currentDirectory();
         rl.prompt();
     });
 
