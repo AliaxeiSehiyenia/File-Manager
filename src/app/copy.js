@@ -15,7 +15,7 @@ const copy = async (pathToFile, pathToNewDirectory) => {
 
         readStream.pipe(writeStream);
 
-        writeStream.on('close', () => console.log('File copied successfully!'));
+        await writeStream.on('close', () => console.log('File copied successfully!'));
     } catch {
         console.log('Operation failed');
     }

@@ -5,6 +5,8 @@ import cat from './cat.js';
 import add from './add.js';
 import rn from './rn.js';
 import copy from './copy.js';
+import mv from './mv.js';
+import rm from './rm.js';
 
 const commandSwitcher = async (command) => {
     const [operation, ...args] = command.split(' ');
@@ -31,10 +33,10 @@ const commandSwitcher = async (command) => {
             args.length === 2 ? await copy(args[0], args[1]) : console.log('Invalid command');
             break;
         case 'mv':
-            console.log('mv');
+            args.length === 2 ? await mv(args[0], args[1]) : console.log('Invalid command');
             break;
         case 'rm':
-            console.log('rm');
+            args.length === 1 ? await rm(args[0]) : console.log('Invalid command');
             break;
         case 'os':
             switch (args[0]) {
